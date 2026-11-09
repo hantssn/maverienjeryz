@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maverien Jeryz</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Dancing+Script:wght@500;700&family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="loader"><svg class="glow" viewBox="0 0 24 22"><path fill="#ff5f9a" d="M12 21S1 14 1 7a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 7-11 14-11 14z"/></svg><p>loading..</p><div class="bar"><i id="fill"></i></div></div>
+<div id="bokeh"></div>
+<audio id="music" src="audio/lagu.mp3" loop preload="none"></audio>
+<div id="music-control">
+  <button id="music-toggle" type="button" aria-label="Putar lagu" aria-pressed="false">♫ Putar lagu</button>
+  <span id="music-status" role="status" aria-live="polite" hidden></span>
+</div>
+
+<main id="scene">
+  <div id="title"></div>
+  <div class="env" id="env">
+    <div class="back"></div>
+    <div class="card">To the person who<br>drives me crazy<div class="stamp"><svg width="12" height="11" viewBox="0 0 24 22"><path fill="#fff" d="M12 21S1 14 1 7a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 7-11 14-11 14z"/></svg></div></div>
+    <svg class="front" viewBox="0 0 300 190" preserveAspectRatio="none">
+      <polygon points="0,190 150,95 300,190" fill="#c34c70"/>
+      <polygon points="0,0 150,100 0,190" fill="#cf5276"/>
+      <polygon points="300,0 150,100 300,190" fill="#cf5276"/>
+      <g stroke="#ffffff55" stroke-width="1"><line x1="0" y1="0" x2="150" y2="100"/><line x1="300" y1="0" x2="150" y2="100"/><line x1="0" y1="190" x2="150" y2="95"/><line x1="300" y1="190" x2="150" y2="95"/></g>
+    </svg>
+  </div>
+  <div id="hint">tap the envelope</div>
+  <div id="down">scroll</div>
+</main>
+
+<section id="more">
+  <div class="feature-card">
+    <h2>Together for</h2>
+    <div class="counter"><div><b id="cd">0</b><small>days</small></div><div><b id="ch">0</b><small>hours</small></div><div><b id="cm">0</b><small>minutes</small></div><div><b id="cs">0</b><small>seconds</small></div></div>
+  </div>
+  <h2>Our little story</h2>
+  <div class="tl" id="tl"></div>
+  <div class="feature-card">
+    <h2>Moments</h2>
+    <div class="gal" id="gal"></div>
+  </div>
+  <div class="feature-card">
+    <h2>For you</h2>
+    <svg class="bq" id="bq" viewBox="0 0 300 350" aria-label="Buket bunga">
+    <defs>
+      <g id="fl"><g fill="currentColor"><ellipse cy="-20" rx="12" ry="22"/><ellipse cy="-20" rx="12" ry="22" transform="rotate(45)"/><ellipse cy="-20" rx="12" ry="22" transform="rotate(90)"/><ellipse cy="-20" rx="12" ry="22" transform="rotate(135)"/><ellipse cy="-20" rx="12" ry="22" transform="rotate(180)"/><ellipse cy="-20" rx="12" ry="22" transform="rotate(225)"/><ellipse cy="-20" rx="12" ry="22" transform="rotate(270)"/><ellipse cy="-20" rx="12" ry="22" transform="rotate(315)"/></g><g fill="#fff" opacity=".3"><ellipse cy="-12" rx="8" ry="14" transform="rotate(22)"/><ellipse cy="-12" rx="8" ry="14" transform="rotate(82)"/><ellipse cy="-12" rx="8" ry="14" transform="rotate(142)"/><ellipse cy="-12" rx="8" ry="14" transform="rotate(202)"/><ellipse cy="-12" rx="8" ry="14" transform="rotate(262)"/><ellipse cy="-12" rx="8" ry="14" transform="rotate(322)"/></g><circle r="9" fill="#ffe3a0"/><circle r="4" fill="#f0b860"/></g>
+      <g id="lf"><path d="M0 0C10-14 28-14 36 0 28 14 10 14 0 0z" fill="#6b9a6e"/><path d="M2 0H32" stroke="#4f7f55" stroke-width="1.2"/></g>
+    </defs>
+    <g class="sway">
+      <g fill="none" stroke="#5f8f64" stroke-width="3" stroke-linecap="round">
+        <path class="st" pathLength="1" d="M150 320C150 250 150 170 150 105"/>
+        <path class="st" pathLength="1" d="M150 320C140 260 110 190 94 135"/>
+        <path class="st" pathLength="1" d="M150 320C160 260 190 190 206 135"/>
+        <path class="st" pathLength="1" d="M150 320C130 280 90 240 62 195"/>
+        <path class="st" pathLength="1" d="M150 320C170 280 210 240 238 195"/>
+        <path class="st" pathLength="1" d="M150 320C145 280 130 230 122 185"/>
+        <path class="st" pathLength="1" d="M150 320C155 280 170 230 178 185"/>
+      </g>
+      <use href="#lf" transform="translate(40 215) rotate(200) scale(1.2)"/>
+      <use href="#lf" transform="translate(260 215) rotate(-20) scale(1.2)"/>
+      <use href="#lf" transform="translate(110 215) rotate(-130)"/>
+      <use href="#lf" transform="translate(190 215) rotate(-50)"/>
+      <use href="#lf" transform="translate(150 190) rotate(-90) scale(.9)"/>
+      <polygon points="52,212 248,212 176,346 124,346" fill="#ffc4d6"/>
+      <polygon points="88,228 212,228 174,346 126,346" fill="#fff3f6"/>
+      <path d="M88 228L150 262 212 228" fill="none" stroke="#e9a9bd" stroke-width="1.5"/>
+      <path d="M52 212L126 346M248 212L174 346" stroke="#f0a0b8" stroke-width="1.5" opacity=".7"/>
+      <g class="b" style="--d:.3s"><use href="#fl" transform="translate(58 185) scale(.85)" style="color:#ffb3cb"/></g>
+      <g class="b" style="--d:.45s"><use href="#fl" transform="translate(242 185) scale(.85)" style="color:#ffb3cb"/></g>
+      <g class="b" style="--d:.6s"><use href="#fl" transform="translate(122 175) scale(.9)" style="color:#fff3f6"/></g>
+      <g class="b" style="--d:.75s"><use href="#fl" transform="translate(178 175) scale(.9)" style="color:#d9577a"/></g>
+      <g class="b" style="--d:.9s"><use href="#fl" transform="translate(92 125) scale(1.05)" style="color:#e8557f"/></g>
+      <g class="b" style="--d:1.05s"><use href="#fl" transform="translate(208 125) scale(1.05)" style="color:#ff8fb0"/></g>
+      <g class="b" style="--d:1.25s"><use href="#fl" transform="translate(150 92) scale(1.3)" style="color:#c34c70"/></g>
+      <g class="b" style="--d:1.5s" fill="#fff"><circle cx="30" cy="150" r="4"/><circle cx="44" cy="135" r="3"/><circle cx="270" cy="150" r="4"/><circle cx="256" cy="133" r="3"/><circle cx="150" cy="34" r="4"/><circle cx="128" cy="46" r="3"/><circle cx="172" cy="46" r="3"/><circle cx="60" cy="92" r="3"/><circle cx="240" cy="92" r="3"/></g>
+      <g><path d="M150 270C130 250 105 258 112 276 118 290 140 282 150 270zM150 270C170 250 195 258 188 276 182 290 160 282 150 270z" fill="#d9577a"/><circle cx="150" cy="271" r="7" fill="#b8456a"/><path d="M146 276L130 312M154 276L170 312" stroke="#d9577a" stroke-width="5" stroke-linecap="round"/></g>
+    </g>
+    </svg>
+    <div class="cap">This flowers for you!</div>
+    <div class="sign">Always yours, Wylie<small>Happy 3rd monthsary</small></div>
+  </div>
+</section>
+
+<div id="overlay">
+  <div class="letter">
+    <div class="scroll">
+      <div class="polas"><div class="pola"><div class="ph" data-photo="0"></div></div><div class="pola"><div class="ph" data-photo="1"></div></div></div>
+      <div class="txt">
+        <p>My dearest, I want you to know how much you mean to me and how grateful I am to have you in my life. It’s been three months since we started this little journey together, and honestly, I’m still so happy that I get to call you mine. Three months may not sound like a long time, but within these months, you’ve given me so many little reasons to smile and so many moments that I wish I could keep forever.</p>
+        <p>I know that we won’t always have perfect days. There might be times when we’re tired, busy, caught up in our own worlds, or simply don’t know what to say. But I hope we never let those little things make us forget why we chose each other in the first place. I want us to keep learning, understanding, and growing together, even when things aren’t easy.</p>
+        <p>Thank you for every little effort, every conversation, every laugh, and every moment you’ve shared with me. Even the simplest days feel special because you’re in them.</p>
+        <p>And lastly, I hope you know that you’re loved, appreciated, and cherished more than these words could ever explain. Thank you for being part of my days and for making these past three months so meaningful. I’m looking forward to everything we haven’t experienced yet.</p>
+        <p>Happy 3rd monthsary, kakak sayang. Here’s to us, to our little story, and to all the chapters waiting ahead. I love you, kakak. Always.</p>
+        <p>With all my love,<br>Wylie.</p>
+      </div>
+    </div>
+    <button id="close">Close letter</button>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
